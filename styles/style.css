@@ -24,15 +24,16 @@ p, a, spam, li, imput, button{
 
 
 body{
-    width: 100%;
-    height: 100%;
-
+    width: 450px;
+    height: 940px;
     display: grid;
-    grid-template-columns: 100% 1fr;
-    grid-template-rows: 150px 500px 1fr;
-    font-size:20px;
+    grid-template-columns: 750px 100%;
+    grid-template-rows: 150px 800px 100%;
+    font-size: 20px;
     font-style: italic;
 background-image: url(../assets/imagenes/fondo\ de\ pagina.jpg);
+background-size:cover;
+
 
 a:link{
     background-color: rgba(137, 43, 226, 0.516);
@@ -40,11 +41,10 @@ a:link{
 }
 
 a:hover{
-    background-color: rgba(255, 0, 0, 0.447);
+    background-color: rgba(255, 0, 0, 0.507);
 }
 
 /* areas */
-
 grid-template-areas: 
 "header header"
 "section aside"
@@ -53,38 +53,85 @@ grid-template-areas:
 }
 
 header{
+    width: 450px;
+    height: 130px;
     padding: 10px;
-    background-color: rgba(0, 0, 255, 0.219);
+    background-color: rgba(0, 255, 106, 0.219);
     grid-area: header;
 }
 
+.menu ul li a {
+    font-size: 10px;
+}
+
+@media (min-width: 450px) {
+    .menu ul li a {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 450px){
+    header{
+        width: 1000px;
+        height: 200px;
+        padding: 10px;
+        background-color: rgba(0, 0, 255, 0.219);
+        grid-area: header;
+    }
+}
+
+
 section{
+    width: 750px;
+    height: 775px;
     padding: 10px;
+    float: left;
     background-color: rgba(255, 55, 0, 0.411);
     grid-area: section;
 }
 
+
 .grid-1{
         display: grid;
-        padding: 40px;
-        width: 100%;
-        height: 600px;
-        padding: 15px;
-    
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 200px 200px 1fr 1fr;
+        padding: 10px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr 1fr ;
+        column-gap: 5px;
+        row-gap: 5px;
+    } 
+
+    @media (min-width: 450px) {
+        .grid-1{
+        display: grid;
+        padding: 20px;
+        width: 750px;
+        height: 775px;
+
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr ;
         column-gap: 10px;
         row-gap: 10px;
+        }
+
     }
 
 
+
+
 aside{
+    width: 250px;
+    height: 790px;
     padding: 10px;
+    float: left;
     background-color:rgba(0, 255, 255, 0.274);
     grid-area: aside;
 }
 
 footer{
+    width: 1000px;
+    height: 150px;
     padding: 10px;
     background-color: rgba(46, 149, 149, 0.509); 
     grid-area: footer;
