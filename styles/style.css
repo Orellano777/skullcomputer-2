@@ -24,7 +24,7 @@ p, a, spam, li, imput, button{
 
 
 body{
-    width: 450px;
+    width: 350px;
     height: 940px;
     display: grid;
     grid-template-columns: 750px 100%;
@@ -32,11 +32,11 @@ body{
     font-size: 20px;
     font-style: italic;
 background-image: url(../assets/imagenes/fondo\ de\ pagina.jpg);
-background-size:cover;
+background-size: 1004px 1200px;
+background-repeat: no-repeat;
 
 
 a:link{
-    background-color: rgba(137, 43, 226, 0.516);
     text-decoration: none;
 }
 
@@ -58,37 +58,54 @@ header{
     padding: 10px;
     background-color: rgba(0, 255, 106, 0.219);
     grid-area: header;
+    border-radius: 10px
 }
-
-.menu ul li a {
-    font-size: 10px;
-}
-
-@media (min-width: 450px) {
-    .menu ul li a {
-        font-size: 20px;
-    }
-}
-
 
 @media (min-width: 450px){
     header{
         width: 1000px;
-        height: 200px;
+        height: 150px;
         padding: 10px;
-        background-color: rgba(0, 0, 255, 0.219);
+        background-color: rgba(0, 183, 255, 0.493);
         grid-area: header;
+        border-radius: 10px;
+    }
+}
+
+
+.menu ul li a {
+    font-size: 10px;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+@media (min-width: 350px) {
+    .menu ul li a {
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: rgb(226, 43, 43);
     }
 }
 
 
 section{
-    width: 750px;
+    width: 250px;
     height: 775px;
-    padding: 10px;
-    float: left;
-    background-color: rgba(255, 55, 0, 0.411);
+    padding: 5px;
+    background-color: rgba(0, 255, 64, 0.342);
+    border-radius: 10px;
     grid-area: section;
+}
+
+@media (min-width: 350px){
+    section{
+        width: 750px;
+        height: 775px;
+        padding: 10px;
+        float: left;
+        background-color: rgba(255, 55, 0, 0.411);
+        grid-area: section;
+    }
 }
 
 
@@ -124,9 +141,20 @@ aside{
     width: 250px;
     height: 790px;
     padding: 10px;
-    float: left;
     background-color:rgba(0, 255, 255, 0.274);
     grid-area: aside;
+}
+
+@media (min-width: 350px) {
+    aside{
+        width: 250px;
+        height: 790px;
+        padding: 10px;
+        float: left;
+        background-color:rgba(0, 255, 255, 0.274);
+        grid-area: aside;
+    }
+    
 }
 
 footer{
@@ -134,6 +162,7 @@ footer{
     height: 150px;
     padding: 10px;
     background-color: rgba(46, 149, 149, 0.509); 
+    border-radius: 10px;
     grid-area: footer;
 }
 
@@ -145,15 +174,32 @@ main{
 
 .grid-container{
     display: grid;
-    padding: 40px;
-    width: 100%;
-    height: 600px;
+    width: 350px;
+    height: 780px;
     padding: 15px;
+    border-radius: 10px;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 200px 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
+
+}
+
+@media (min-width: 350px){
+    .grid-container{
+        display: grid;
+        width: 1000px;
+        height: 780px;
+        padding: 15px;
+        border-radius: 10px;
+
+    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
 }
 
 /* contacto */
@@ -211,16 +257,14 @@ main{
     height: 600px;
     padding: 15px;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 200px 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
 
 }
 
-.serv-grid-1{
-    border-radius: 10px;
-}
+
 
 h3{
     text-align: center;
